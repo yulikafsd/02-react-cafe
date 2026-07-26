@@ -1,77 +1,103 @@
-# React + TypeScript + Vite
+# Project Title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A brief description of what this project does and who it's for
 
-Currently, two official plugins are available:
+# Sip Happens Café — Feedback Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A responsive React web application built with TypeScript and Vite that allows users to leave feedback (Good, Neutral, Bad) for Sip Happens Café, view real-time statistics, and reset the collected data.
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+[View Live App on Vercel](https://02-react-cafe-qku8.vercel.app/)
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Tools
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** — UI library
+- **TypeScript** — Static typing
+- **Vite** — Fast frontend build tool
+- **CSS Modules** — Scoped component styling
+- **Modern Normalize** — Consistent cross-browser base styles
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Interactive Voting**: Collects user feedback via `Good`, `Neutral`, and `Bad` options.
+- **Calculated Statistics**: Computes total feedback count and positive feedback percentage on the fly without redundant state storage.
+- **Conditional Rendering**:
+    - Displays a `Notification` message when no votes have been recorded.
+    - Shows `VoteStats` as soon as the first vote is registered.
+    - Shows the `Reset` button dynamically when total votes are greater than `0`.
+- **State Reset**: Clears all collected statistics back to initial zero values.
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── App/
+│   │   ├── App.module.css
+│   │   └── App.tsx
+│   ├── CafeInfo/
+│   │   ├── CafeInfo.module.css
+│   │   └── CafeInfo.tsx
+│   ├── Notification/
+│   │   ├── Notification.module.css
+│   │   └── Notification.tsx
+│   ├── VoteOptions/
+│   │   ├── VoteOptions.module.css
+│   │   └── VoteOptions.tsx
+│   └── VoteStats/
+│       ├── VoteStats.module.css
+│       └── VoteStats.tsx
+├── types/
+│   └── votes.ts
+├── declarations.d.ts
+├── global.css
+├── main.tsx
+└── vite-env.d.ts
 
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 💻 Getting Started Locally
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository:**
+
+```bash
+git clone [https://github.com/your-username/02-react-cafe.git](https://github.com/your-username/02-react-cafe.git)
+
+```
+
+2. **Navigate to the project directory:**
+
+```bash
+cd 02-react-cafe
+
+```
+
+3. **Install dependencies:**
+
+```bash
+npm install
+
+```
+
+4. **Start the development server:**
+
+```bash
+npm run dev
+
+```
+
+5. **Build for production:**
+
+```bash
+npm run build
 
 ```

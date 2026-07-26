@@ -33,6 +33,7 @@ A responsive React web application built with TypeScript and Vite that allows us
 ## 📂 Project Structure
 
 ```text
+
 src/
 ├── components/
 │   ├── App/
@@ -54,8 +55,18 @@ src/
 │   └── votes.ts
 ├── declarations.d.ts
 ├── global.css
-├── main.tsx
-└── vite-env.d.ts
+└── main.tsx
+.gitignore
+.prettierrc
+eslint.config.js
+index.html
+package-lock.json
+package.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
 
 ```
 
@@ -66,7 +77,7 @@ src/
 1. **Clone the repository:**
 
 ```bash
-git clone [https://github.com/your-username/02-react-cafe.git](https://github.com/your-username/02-react-cafe.git)
+git clone [https://github.com/yulikafsd/02-react-cafe.git](https://github.com/yulikafsd/02-react-cafe.git)
 
 ```
 
@@ -88,12 +99,5 @@ npm install
 
 ```bash
 npm run dev
-
-```
-
-5. **Build for production:**
-
-```bash
-npm run build
 
 ```

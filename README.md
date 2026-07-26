@@ -4,7 +4,7 @@ A responsive React web application built with TypeScript and Vite that allows us
 
 ## 🚀 Live Demo
 
-[View Live App on Vercel](https://02-react-cafe-qku8.vercel.app/)
+[View Live App on Vercel](https://02-react-cafe-yu-za.vercel.app/)
 
 ---
 

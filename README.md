@@ -1,7 +1,3 @@
-# Project Title
-
-A brief description of what this project does and who it's for
-
 # Sip Happens Café — Feedback Application
 
 A responsive React web application built with TypeScript and Vite that allows users to leave feedback (Good, Neutral, Bad) for Sip Happens Café, view real-time statistics, and reset the collected data.
